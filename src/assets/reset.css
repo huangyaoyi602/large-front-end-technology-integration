@@ -1,0 +1,82 @@
+/* reset */
+@charset "utf-8";
+/* CSS Document */
+body,
+div,
+ol,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+th,
+header,
+main,
+section,
+td,
+dl,
+dd,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+select {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+button {
+  border: none;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong {
+  font-weight: normal;
+  font-style: normal;
+}
+i,
+em {
+  font-style: normal;
+}
+img {
+  border: 0;
+}
+input {
+  outline: none;
+  border: none;
+}
+.clearfix:after {
+  content: ' ';
+  display: block;
+  height: 0;
+  overflow: hidden;
+  clear: both;
+}
+body::-webkit-scrollbar {
+  width: 0px !important;
+}
+
+body::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* end reset */

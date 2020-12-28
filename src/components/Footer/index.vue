@@ -1,14 +1,12 @@
 <!--
  * @Author: hyy
- * @Date: 2020-12-21 15:27:23
+ * @Date: 2020-12-28 15:10:00
  * @LastEditors: hyy
- * @LastEditTime: 2020-12-28 16:20:38
+ * @LastEditTime: 2020-12-28 15:52:44
 -->
 <template>
   <div :class="$style.container">
-    <div :class="$style.body">
-      
-    </div>
+    233333
   </div>
 </template>
 
@@ -18,19 +16,19 @@ import {reactive,toRefs} from "vue"
 
 //  }
 export default{
-  name:"Home",
+  name:"Footer",
   setup() {
    const data = reactive({
 
    })
    const refData = toRefs(data)
     return {
-     ...refData
+     ...refData 
     }
   }
 }
 </script>
 
-<style src="./home.scss"
+<style src="./footer.scss"
  lang="scss" module>
 </style>

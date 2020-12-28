@@ -2,20 +2,11 @@
  * @Author: hyy
  * @Date: 2020-12-21 15:19:24
  * @LastEditors: hyy
- * @LastEditTime: 2020-12-21 15:46:10
+ * @LastEditTime: 2020-12-28 16:39:20
  */
-import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
+import { createRouter, createWebHistory } from "vue-router";
+import {routes} from '@/router/routes'
 
-const Home = ()=>import(/* webpackChunkName: "Home" */ '../views/Home/index.vue')
-
-
-const routes: Array<RouteRecordRaw> = [
-  {
-    path: "/",
-    name: "Home",
-    component: Home
-  },
-];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),

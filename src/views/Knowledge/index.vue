@@ -1,14 +1,15 @@
 <!--
  * @Author: hyy
- * @Date: 2020-12-21 15:27:23
+ * @Date: 2020-12-28 16:23:33
  * @LastEditors: hyy
- * @LastEditTime: 2020-12-28 16:20:38
+ * @LastEditTime: 2020-12-28 16:26:40
 -->
 <template>
   <div :class="$style.container">
     <div :class="$style.body">
-      
+      23333
     </div>
+    
   </div>
 </template>
 
@@ -18,7 +19,7 @@ import {reactive,toRefs} from "vue"
 
 //  }
 export default{
-  name:"Home",
+  name:"App",
   setup() {
    const data = reactive({
 
@@ -31,6 +32,6 @@ export default{
 }
 </script>
 
-<style src="./home.scss"
+<style src="./knowledge.scss"
  lang="scss" module>
 </style>

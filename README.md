@@ -2,7 +2,7 @@
  * @Author: hyy
  * @Date: 2020-12-21 13:11:59
  * @LastEditors: hyy
- * @LastEditTime: 2020-12-21 16:36:51
+ * @LastEditTime: 2020-12-28 16:58:51
 -->
 * 基于vue3.0开发
 
@@ -34,3 +34,13 @@ vue ui
    npm install  px2rem-loader --save
    npm install amfe-flexible --save
    ```
+5. css模块化
+   * 在vue中使用外部css文件，class使用 
+   ```
+   :class="$style.xxx"
+   ```
+6. 引入时间插件dayjs
+
+
+#### 开发日志 by hyy
+1. 首页框架，页面css引入模版以及路由范例 12.28

@@ -2,19 +2,20 @@
  * @Author: hyy
  * @Date: 2020-12-28 10:44:30
  * @LastEditors: hyy
- * @LastEditTime: 2020-12-28 16:49:35
+ * @LastEditTime: 2020-12-31 13:39:25
 -->
 <template>
   <div :class="$style.container">
     <div :class="$style.body">
       <div :class="$style.logoBox"><img :class="$style.logo" src="" alt="logo"></div>
     <div :class="$style.nav">
-      <el-menu background-color="#ebebeb" text-color="#ccc" :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
-        <el-menu-item index="1" @click="replacePage('/home')">首页</el-menu-item>
+      <el-menu background-color="#ebebeb" text-color="#111" :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
+        <el-menu-item index="1" @click="replacePage('/home')">首页推荐</el-menu-item>
         <el-menu-item index="2" @click="replacePage('/knowledge')">知识体系</el-menu-item>
-        <el-menu-item index="3">首页</el-menu-item>
-        <el-menu-item index="4">首页</el-menu-item>
-        <el-menu-item index="5">首页</el-menu-item>
+        <el-menu-item index="3">霸哥收集</el-menu-item>
+        <el-menu-item index="4">前沿探索</el-menu-item>
+        <el-menu-item index="5">关于我们</el-menu-item>
+        <el-menu-item index="6" @click="replacePage('/test')">功能测试</el-menu-item>
       </el-menu>
     </div>
     </div>

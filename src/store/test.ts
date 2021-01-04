@@ -2,15 +2,14 @@
  * @Author: hyy
  * @Date: 2020-12-31 14:35:58
  * @LastEditors: hyy
- * @LastEditTime: 2020-12-31 16:56:30
+ * @LastEditTime: 2021-01-04 18:51:14
  */
-import {Module} from 'vuex'
+import {Module,GetterTree,ActionTree} from 'vuex'
+
 export interface TestState{
     num:number 
 }
-export interface _TestState{
-  
-}
+
 
 const state:TestState = {
   num:1
@@ -19,22 +18,22 @@ const state:TestState = {
 // const asyncAndCommit = async()=>{}
 
 
-const Test:Module<TestState,_TestState>={
+const Test={
   namespaced:true,
   state,
   mutations:{
-    setNum(state:TestState,newNum:number){
+    setNum(state:TestState,newNum:number):void{
      state.num = newNum
     }
   },
   getters:{
-    getNum(state:TestState){
-      return state.num
+    getNum:(state:TestState):number=>{
+      return state.num+1
     }
   },
   actions:{
-    handleNum({state,commit},query){
-      commit('getNum',query)
+    handleNum({state,commit},query:number):void{
+      commit('setNum',query)
     }
   }
 

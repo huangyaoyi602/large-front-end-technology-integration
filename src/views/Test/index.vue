@@ -2,7 +2,7 @@
  * @Author: hyy
  * @Date: 2020-12-31 13:36:44
  * @LastEditors: hyy
- * @LastEditTime: 2021-01-04 18:50:36
+ * @LastEditTime: 2021-01-11 11:31:05
 -->
 <template>
   <div :class="$style.container">
@@ -13,6 +13,7 @@
        <div>？？{{num_}}</div>
    <div @click="addNum" >3</div>
    <div @click="setNum" >5</div>
+   <div @click="getTest">test</div>
     </div>
   </div>
 </template>
@@ -42,12 +43,18 @@ export default defineComponent({
    }
    const setNum = ()=>{
      store.dispatch('test/handleNum',5)}
+    const getTest = ()=>{
+      store.dispatch('test/handleGetTest')
+      console.log('dispatch');
+      
+    }
     return {
      ...refData,
      test,
      num_,
      addNum,
-     setNum
+     setNum,
+     getTest
     }
   }
 })

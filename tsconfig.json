@@ -11,7 +11,8 @@
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
     "baseUrl": ".",
-    "noImplicitAny": false,
+    "noImplicitAny": false, //any类型不报错
+    "allowJs": true,
     "types": [
       "webpack-env",
       "mocha",

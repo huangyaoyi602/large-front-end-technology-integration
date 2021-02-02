@@ -2,9 +2,8 @@
  * @Author: hyy
  * @Date: 2020-12-31 14:35:58
  * @LastEditors: hyy
- * @LastEditTime: 2021-01-11 13:40:58
+ * @LastEditTime: 2021-02-02 11:18:31
  */
-import {Module,GetterTree,ActionTree} from 'vuex'
 import {TEST} from '../api/test'
 
 export interface TestState{

@@ -2,14 +2,17 @@
  * @Author: hyy
  * @Date: 2020-12-21 15:19:24
  * @LastEditors: hyy
- * @LastEditTime: 2020-12-31 16:40:57
+ * @LastEditTime: 2021-01-28 08:56:13
  */
 import { createStore } from "vuex";
-import test,{TestState} from './test'
 import persistedstate from 'vuex-persistedstate'
 
+import test,{TestState} from './test'
+import bugStore,{BugState} from './bugCollect'
+
 export interface GlobalState{
-  test:TestState
+  test:TestState,
+  bug:BugState
 }
 
 
@@ -21,6 +24,7 @@ export default createStore({
   mutations: {},
   actions: {},
   modules: {
-    test
+    test,
+    bugStore
   }
 });

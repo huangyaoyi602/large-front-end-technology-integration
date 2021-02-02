@@ -2,7 +2,7 @@
  * @Author: hyy
  * @Date: 2020-12-31 13:36:44
  * @LastEditors: hyy
- * @LastEditTime: 2021-01-12 10:32:08
+ * @LastEditTime: 2021-01-28 17:05:19
 -->
 <template>
   <div :class="$style.container">
@@ -44,8 +44,8 @@ export default defineComponent({
    const setNum = ()=>{
      store.dispatch('test/handleNum',5)}
     const getTest = ()=>{
-      store.dispatch('test/handleGetTest')
       console.log('dispatch');
+      store.dispatch('test/handleGetTest')
       
     }
     return {

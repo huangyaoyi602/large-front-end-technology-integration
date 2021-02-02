@@ -2,7 +2,7 @@
  * @Author: hyy
  * @Date: 2020-12-21 15:19:24
  * @LastEditors: hyy
- * @LastEditTime: 2020-12-21 16:25:54
+ * @LastEditTime: 2021-01-28 13:37:34
  */
 module.exports = {
   root: true,
@@ -22,7 +22,8 @@ module.exports = {
   rules: {
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
-    "@typescript-eslint/no-explicit-any": 'off'
+    "@typescript-eslint/no-explicit-any": 'off',
+    "prefer-const":"off"
   },
   overrides: [
     {

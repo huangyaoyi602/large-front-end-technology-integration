@@ -2,7 +2,7 @@
  * @Author: hyy
  * @Date: 2020-12-31 13:36:44
  * @LastEditors: hyy
- * @LastEditTime: 2021-01-28 17:05:19
+ * @LastEditTime: 2021-02-04 16:47:00
 -->
 <template>
   <div :class="$style.container">
@@ -14,7 +14,10 @@
    <div @click="addNum" >3</div>
    <div @click="setNum" >5</div>
    <div @click="getTest">test</div>
+   <div :class="$style.user" @click="user">USER</div>
     </div>
+
+    
   </div>
 </template>
 
@@ -24,6 +27,7 @@ import {defineComponent,reactive,toRefs,computed} from "vue"
 import {useRoute,useRouter} from 'vue-router'
 import {mapGetters, useStore} from 'vuex'
 import {GlobalState} from '../../store/index'
+import {getUser} from '../../api/test'
 
 // interface dataProps{
 
@@ -48,13 +52,17 @@ export default defineComponent({
       store.dispatch('test/handleGetTest')
       
     }
+    const user = async ()=>{
+      await getUser().then(res=>console.log(res))
+    }
     return {
      ...refData,
      test,
      num_,
      addNum,
      setNum,
-     getTest
+     getTest,
+     user
     }
   }
 })

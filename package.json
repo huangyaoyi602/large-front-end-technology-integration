@@ -18,7 +18,8 @@
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0",
-    "vuex-persistedstate": "^4.0.0-beta.1"
+    "vuex-persistedstate": "^4.0.0-beta.1",
+    "wangeditor": "^4.6.6"
   },
   "devDependencies": {
     "@types/chai": "^4.2.11",

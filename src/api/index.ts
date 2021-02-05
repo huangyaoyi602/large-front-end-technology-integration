@@ -2,10 +2,11 @@
  * @Author: hyy
  * @Date: 2021-01-11 11:06:13
  * @LastEditors: hyy
- * @LastEditTime: 2021-01-29 11:24:30
+ * @LastEditTime: 2021-02-05 15:21:23
  */
 import { config } from '@vue/test-utils'
 import axios from 'axios'
+import router from '@/router'
 
 const getCookie = (name)=>{
   let arr,reg = new RegExp("(^| )"+name+"=([^;]*)(;|&)")
@@ -25,6 +26,10 @@ const request = axios.create({
 
 request.interceptors.request.use(
  config=>{
+  const token =  sessionStorage.getItem('USER_KEY') || ''
+
+  
+  if(token) config.headers['Authorization']= JSON.parse(token)
   config.headers['x-csrf-token'] = getCookie('csrfToken')
   return config
  },
@@ -39,8 +44,10 @@ request.interceptors.response.use(
     
     return response.data},
   error=>{
-    console.log(error);
-    
+    if(error.message.slice(-3)==='401'){
+      
+      router.push({path:'/login',query:{err:401}})
+    }
   }
 )
 
